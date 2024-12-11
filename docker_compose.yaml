@@ -1,0 +1,11 @@
+services: 
+wordpress: 
+image: wordpress 
+restart: always 
+ports: - 80:80 
+environment: 
+WORDPRESS_DB_HOST: db-1.cnw2yuaeu5s6.us-east-1.rds.amazonaws.com 
+WORDPRESS_DB_USER: admin 
+WORDPRESS_DB_PASSWORD: 87654321 
+WORDPRESS_DB_NAME: wordb 
+volumes: - /mnt/efs/wordpress:/var/www/html
